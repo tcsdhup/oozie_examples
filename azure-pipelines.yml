@@ -18,4 +18,4 @@ steps:
   displayName: Publish Oozie Build Artifacts
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)/$(artifact_dir)'
-    artifactName: oozie_example
+    #artifactName: oozie_example
