@@ -11,11 +11,11 @@ variables:
 steps:
 - bash: |
     mkdir -p "$(Build.ArtifactStagingDirectory)/$(artifact_dir)"
-    cp -r examples "$(Build.ArtifactStagingDirectory)/$(artifact_dir)/"
+    cp -r examples "$(Build.ArtifactStagingDirectory)/"
   displayName: 'Include Oozie apps code to Build Artifacts'
 
 - task: PublishBuildArtifacts@1
   displayName: Publish Oozie Build Artifacts
   inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)/$(artifact_dir)'
-    #artifactName: oozie_example
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)/'
+    artifactName: oozie_example
